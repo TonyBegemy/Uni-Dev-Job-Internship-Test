@@ -1,4 +1,4 @@
-### Importing the neccessary libraries
+### Importing the necessary libraries
 import warnings
 import openai
 import os
@@ -46,10 +46,10 @@ def getPrompt(args):
 
 def argumentParser():
     """
-     This is a function uses the command-line parsing module in the Python.
+     This is a function that uses the command-line parsing module in Python.
     """
     parser = argparse.ArgumentParser()
-    # The two below lines return the Programming language and question written bt command line to the object parser
+    # The two below lines return the Programming language and question written by command line to the object parser
     parser.add_argument("-language", '-lang', '-l', help="Programming language for code e.g. Python", nargs='*', required=True, type=str) 
     parser.add_argument("-question","-q", help="Enter your Question", nargs='*', required=True, type=str)
     args = parser.parse_args()
@@ -57,7 +57,7 @@ def argumentParser():
 
 def generateResponse():
     """
-     This is a function used to generate response from the prompt.
+     This is a function used to generate a response from the prompt.
     """
     model = loadModel()
     arguments = argumentParser()
@@ -67,7 +67,7 @@ def generateResponse():
 
 def main():
     """
-     This is a main function responsible for the implementation of the code.
+     This is the main function responsible for the implementation of the code.
     """
     generateResponse()
 
