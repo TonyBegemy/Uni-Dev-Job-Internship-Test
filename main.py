@@ -33,13 +33,13 @@ def getPrompt(args):
     template = """
     Generate a code given the user's query \
     that is delimited by triple backticks, \
-    using the programming language: {programing_language}. \
+    using the programming language: {programming_language}. \
     User's query: ```{code_question}``` \
     Instructions: {Instructions}
     """
     prompt_template = ChatPromptTemplate.from_template(template) # function user to return the input_variables
     prompt = prompt_template.format_messages(
-    programing_language=args.language,
+    programming_language=args.language,
     code_question=args.question,
     Instructions = Instructions)
     return prompt
